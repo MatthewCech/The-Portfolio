@@ -6,7 +6,7 @@ Go ahead and make a github repo - for testing to make sure it's set up correctly
 
 ### Configuring GitHub's side of this:
 
-<img src="https://i.imgur.com/NZlhA6a.gif" alt="Configuring Github" width="300px">
+![Configuring Github to use a custom domain](https://i.imgur.com/NZlhA6a.gif)
 
 - Head to repo settings
 - Find the secion about github pages. If you have not enabled it, do so. 
@@ -17,7 +17,7 @@ Go ahead and make a github repo - for testing to make sure it's set up correctly
 
 ### Configuring Google Domains
 
-<img src="https://i.imgur.com/Nn929du.gif" alt="Setting up Google Domains to point at GitHub for HTTP component" width="300px">
+![Setting up Google Domains to point at GitHub](https://i.imgur.com/Nn929du.gif) 
 
 - Go to domains.google.com and navigate to the domain you wish to point at github.
 - Head to the DNS tab (second from the right, looks like stacked boxes)
@@ -35,3 +35,25 @@ However, there's no HTTPS going on, and you still need a site. For now, we shoul
 
 We'll be using cloudflare in order to force connections to be HTTPS. They don't make you pay for an SSL certificate, which is nice.
 
+We'll start by making an email to use with Cloudflare. This can be done using one of the many free email forwards you get with a custom domain.
+
+![Setting up an email with your domain](https://i.imgur.com/eFmyvsb.gif)
+
+- Go to domains.google.com and navigate to the domain you've been using for this
+- Click on the mail tab, second from the left, and scroll down. 
+- Enter `cloudflare` as the email name, and route it to an email you own already. 
+- As necessary, confirm the email. If you forward to the email you used for registering the domain, no confirmation is necessary.
+
+
+Next, we're going to be setting up a cloudflare account, and fight out way to the console.
+
+![Making a cloudflare account](https://i.imgur.com/uNvyr7k.gifv)
+
+- Head to Cloudflare.com
+- Click on the 'log in' button in the upper right of the site, and proceed to make an account. For your email, use the email you just created.
+- Once you have created an account, you will be asked to specify the name of your site. Do so with your custom URL.
+- From here, you will be asked to select a plan. For our purposes, the free one is just fine. 
+- After confirming the plan, Cloudflare will query the existing DNS for all records. You should see 3 records that you made: the 2 A records that go to githubs IP, and the CNAME record. You will also see MX records for goole email servers. 
+- If all records are present, continue. This should take you to the last step before the console.
+- You will then be asked to update the name servers. Go back to the DNS records section of your custom domain, and go ahead and find the nameservers section at the top. Copy in the ones Cloudflare specifies.
+- Once updated. you will then be at the console.
