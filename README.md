@@ -1,23 +1,29 @@
 # The-Portfolio
-A quick template and walkthough for a minimalist portfolio website
+A quick template and walkthough for a minimalist portfolio website using the HTML present in this repo. Sections have accompanying gifs, but due to size limitations, I have not displayed the inline in the markdown. 
+
+
 
 ### Getting Started
-Go ahead and make a github repo - for testing to make sure it's set up correctly, make the name `yourname.github.io`. For example, I would use matthewcech.github.io as the name.
+
+Go ahead and make a github repo - for testing to make sure it's set up correctly, make the name `yourname.github.io`. For example, I would use matthewcech.github.io as the name. You can do this with a differently named repo as well if you wish, you'll just have one extra step when 
+
+
 
 ### Configuring GitHub's side of this:
 
-![Configuring Github to use a custom domain](https://i.imgur.com/NZlhA6a.gif)
+Section Walkthough Gif: https://i.imgur.com/NZlhA6a.gif
 
 - Head to repo settings
-- Find the secion about github pages. If you have not enabled it, do so. 
+- Find the secion about github pages. If you have not enabled it, do so, probably on master branch. (Stop here if you don't want a custom domain!)
 - Once enabled, specify your custom domain. 
 - If you look in the repo root, we see a CNAME file was added!
 - It's good practice to add a www.<sitename> variant. You can do this in-browser by clicking the edit button.
 
 
+
 ### Configuring Google Domains
 
-![Setting up Google Domains to point at GitHub](https://i.imgur.com/Nn929du.gif) 
+Section Walkthough Gif: https://i.imgur.com/Nn929du.gif 
 
 - Go to domains.google.com and navigate to the domain you wish to point at github.
 - Head to the DNS tab (second from the right, looks like stacked boxes)
@@ -28,6 +34,8 @@ Go ahead and make a github repo - for testing to make sure it's set up correctly
 
 Google domains is fast. Like, really fast. Realistically, you can probably navigate to your new site right after setting all that up, so go ahead and test that out in incognito/private browsing mode so that we don't have old things cached.
 
+
+
 ### HTTPS (Optional, but not really optional)
 
 At this point, we have your domain hosted at github pages. We have a custom domain rerouting HTTP requests.
@@ -37,7 +45,8 @@ We'll be using cloudflare in order to force connections to be HTTPS. They don't 
 
 We'll start by making an email to use with Cloudflare. This can be done using one of the many free email forwards you get with a custom domain.
 
-![Setting up an email with your domain](https://i.imgur.com/eFmyvsb.gif)
+
+Section Walkthough Gif: https://i.imgur.com/eFmyvsb.gif
 
 - Go to domains.google.com and navigate to the domain you've been using for this
 - Click on the mail tab, second from the left, and scroll down. 
@@ -47,7 +56,7 @@ We'll start by making an email to use with Cloudflare. This can be done using on
 
 Next, we're going to be setting up a cloudflare account, and fight out way to the console.
 
-![Making a cloudflare account](https://i.imgur.com/uNvyr7k.gif)
+Section Walkthough Gif: https://i.imgur.com/uNvyr7k.gif
 
 - Head to Cloudflare.com
 - Click on the 'log in' button in the upper right of the site, and proceed to make an account. For your email, use the email you just created.
@@ -60,7 +69,8 @@ Next, we're going to be setting up a cloudflare account, and fight out way to th
 
 Second to last, we're going to set up an SSL certificate.
 
-![Getting an SSL certificate](https://i.imgur.com/8eG7flT.gif)
+
+Section Walkthough Gif: https://i.imgur.com/8eG7flT.gif
 
 - In cloudflare, head to the Crypto tab at the top
 - Under SSL at the top, select 'flexible' from the drop down. We're going to need a flexible certificate. 
@@ -70,6 +80,7 @@ Second to last, we're going to set up an SSL certificate.
 Finally, we're going to force everything to be rewritten to HTTPS. Because Security. Also looks professional. Also improves search result rating.
 
 
+Section Walkthough Gif: https://i.imgur.com/cX9Jsyz.gif
 
 - Head to the page rules tab at the top
 - Create a new page rule for "Enforce HTTPS"
@@ -77,3 +88,13 @@ Finally, we're going to force everything to be rewritten to HTTPS. Because Secur
 	- As an example, this demo site has `http://*theportfolio.pw*` in that field
 
 In the crypto tab, if the certificate says "active" and if in the overview tab it says "Status: Active" then you're good to go for HTTPS. Try navigating to your page now! It should say "secure" to the left of the URL.
+
+You're done! Good work!
+
+
+
+### Afterthoughts
+
+You'll need to update information in the template that's in this repo. I'd recommend a text editor that does color syntax highlighting for HTML - I personally use Sublime Text, but other common ones are Notepad++, and as of writing, atom is all the rage. Most IDEs tend to have HTML support as well.
+
+If you're like me and don't use an IDE for this, rather, just a text editor, you will probably need a convenient local webserver. I use something called mongoose: There's a free version of it available for download at https://cesanta.com/binary.html - just plop it in your directory, and double-click to start it! 
