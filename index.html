@@ -6,13 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Set up title, favicon, and description -->
-    <title>Portfolio Website</title>
-    <link rel="shortcut icon" href="/assets/folder-open.ico">
-    <meta name="description" content="The Portfolio provides a nice way to get started showcasing a few projects. This site and layout are free to use - a shoutout would be apprecaited if you use it, in the source or elsewhere!">
-    <meta name="author" content="Matthew Cech"> <!-- Consider changing this name. -->
+    <title>Make Awesome Portfolios</title>
+    <link rel="shortcut icon" href="portfolio/assets/folder-open.ico">
+    <meta name="description" content="The Portfolio provides a nice way to get started showcasing a few projects. The site and layouts are free to use - a shoutout would be apprecaited if you use it, in the source or elsewhere!">
+    <meta name="author" content="Matthew Cech">
 
-    <!-- Go ahead and grab Bootstrap and Fontawesome. -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -20,100 +18,95 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   </head>
 
-
-  <!-- Stylesheet added here for ease of iteration. Consider moving to a separate file. -->
   <style>
-    /* Built-in */
-    body {
-      background-image: url('assets/squairy_light.png');
-    }
+  body {
+    height: 100vh;
+    background-color: rgb(251,252,253); 
+  }
+  .siteview {
+    overflow:auto;
+    border:1px solid rgba(0,0,0,.3);
+    width: 100%;
+    height: 720px;
+    border-radius: 7px;
+    box-shadow: 1px 1px 4px #AAAAAA;
+  }
 
+  .full-height {
+    height: 100%;
+  }
 
-    /* Bootstrap classes being adjusted */
-    .jumbotron {
-      border-radius: 7px;
-      background-color: rgba(200,200,200,0);
-    }
+  .spacer-bottom {
+    height: 150px;
+  }
 
-
-    /* Custom-made classes */
-    .portfolio-showcase-img {
-      max-width: 200px;
-      border-radius: 250px;
-      margin-left: 10px;
-      margin-right: 10px;
-      display: inline-block;
-    }
-
-    .portfolio-showcase-text {
-      margin-left: 10px;
-      margin-right: 10px;
-      margin-top: 10px;
-    }
-
-    .portfolio-showcase-title {
-      margin-top: 20px;
-    }
-
-    .portfolio-social-link {
-      width: 40px;
-    }
-
-    .portfolio-showcase-col {
-      margin-bottom: 30px;  
-    }
-    .portfolio-maring-left-fix {
-      margin-left: -2px;
-    }
+  .spacer-top {
+    margin-top: 10px;
+  }
   </style>
 
-
-  <!-- This is the body of the site: This is what's displayed in the browser! -->
   <body>
-    <div class="container">
-      <div class="jumbotron">
+    <div class="container text-center full-height">
+      <div class="spacer-top"></div>
 
-        <!-- NAME HEADER AND TITLE -->
-        <h1>Your Name here</h1> 
-        <p>Place your job title or another short about you here - perhaps include any degrees or qualifications!</p> 
 
-        <!-- RESUME DOWNLOAD. CHANGE THE NAME IN THE DOWNLOAD SECTION! -->
-        <a download="Your Name Here - Resume" class="btn btn-outline-dark" role="button" href="/assets/Resume.pdf"><i class="fa fa-download" aria-hidden="true"></i> Resume</a>
+      <h1>"I need a portfolio site"</h1>
+      <p><em>Hey, don't worry, I've got you covered!</em></p>
+      <hr>
 
-        <!-- OPTIONAL OTHER LINKS -->
-        <a class="btn btn-outline-dark portfolio-social-link" role="button" href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-        <a class="btn btn-outline-dark portfolio-social-link" role="button" href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-        <a class="btn btn-outline-dark portfolio-social-link" role="button" href="https://www.youtube.com/"><i class="fab fa-youtube portfolio-maring-left-fix"></i></a>
-        <hr/>
 
-        <!-- columns start -->
-        <div class="row text-center"> 
-
-          <!-- FIRST COLUMN -->
-          <div class="col-md-4 portfolio-showcase-col">
-            <img class="portfolio-showcase-img" src="/assets/showcase_1.jpeg" alt="Showcase 1 picture">
-            <h5 class="portfolio-showcase-text">Project Name</h5> <!-- Place inside h5 tag for link <a href="#"><i class="fas fa-link"></i></a> -->
-            <p class="text-left portfolio-showcase-text">Stock photo from Pexels.com. This would be an excellent place for a description to go. You can explain your project, talk about things you learned, stuff you're proud of. This is a talking point that could come up in an interview. Talk about why this is awesome, and don't try to be modest - This is your portfolio!<p>
-          </div>
-          
-          <!-- SECOND COLUMN -->
-          <div class="col-md-4 portfolio-showcase-col">
-            <img class="portfolio-showcase-img" src="/assets/showcase_2.jpeg" alt="Showcase 2 picture">
-             <h5 class="portfolio-showcase-text">Another Project</h5>
-            <p class="text-left portfolio-showcase-text">Stock photo from Pexels.com. This would be an excellent place for a description to go. You can explain your project, talk about things you learned, stuff you're proud of. Items placed in the middle of sites tend not to come up in interviews as much - on mobile, this will be neither the first or last item, so you can sorta 'hide' somethting here if that makes sense.<p>
-          </div>
-          
-          <!-- THIRD COLUMN -->
-          <div class="col-md-4 portfolio-showcase-col">
-            <img class="portfolio-showcase-img" src="/assets/showcase_3.jpg" alt="Showcase 3 picture">
-             <h5 class="portfolio-showcase-text">Third Project</h5>
-            <p class="text-left portfolio-showcase-text">Stock photo from Pexels.com. This would be an excellent place for a description to go. You can explain your project, talk about things you learned, stuff you're proud of. Interviewers love to ask about the first and the last items on your resume or portfolio site, and this is your last item, so finish strong and make it something awesome!<p>
-          </div>
-
-        </div> 
-        <!-- columns end -->
-
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+          <h3>What's the goal?</h3>
+          <p class="text-left">I want to provide a quick and easy way to get started showcasing your work online even if you've got basically no money. Instead of trying to get you to give me money, I just want you to showcase your work so I can look at it and go "Ooooo".<br><br>First and foremost, this is free of charge, and while some services I may recommend setting up with tutorials may have paid tiers, they never need to be used. The <em>only</em> thing I would ask you would consider buying at any point is a custom domain though Google Domains. I don't get paid to recommend them, I say it because it's the most bang for your buck.</p>
+        </div>
+        <div class="col-md-5">
+          <h3>What technologies?</h3>
+          <p class="text-left">I use <a href="https://getbootstrap.com/">Bootstrap<a> and <a href="https://fontawesome.com/">Font Awesome</a> for actual page content, because of course I do. What's Bootstrap for those new to the party? Well, it's an open source toolkit that makes things look not as terrible when you resize a page. Font Awesome, on the other hand, is just a sweet way to add professionally designed icons to things!<br><br>For hosting, I use <a href="https://pages.github.com/">GitHub Pages</a>. If you don't like the idea of fiddling with HTML and just want a theme-maker / don't want to suffer, you can use their built-in one: It's free! In addition, I recommend <a href="https://domains.google/#/">Google Domains</a> for buying domains since you get email forwarding and it doesn't make me rip my hair out, plus <a href="https://www.cloudflare.com/">Cloudflare</a> free tier is used for a free SSL certificate.
+        </div>
+        <div class="col-md-1"></div>
       </div>
+      <br>
+
+
+      <h1>"Show me what you've got!"</h1>
+      <div class="row">
+        <div class="col-md"></div>
+        <div class="col-md-5">
+          <p class="text-left"> Can-do! Below is a collection of free-to-use portfolio sites: Each site has a demo visible, and an option to download the source below said demo. These sites all are designed to be approachable, with hand-written and commented HTML!</p>
+        </div>
+        <div class="col-md"></div>
+      </div>
+      <br>
+      <p><i class="fas fa-circle"></i>&nbsp;&nbsp;<i class="fas fa-circle"></i>&nbsp;&nbsp;<i class="fas fa-circle"></i></p>
+      <br>
+      <div class="row">
+        <div class="col-md"></div>
+        <div class="col-md-5">
+          <h3>Project Cards</h3>
+          <p class="text-left"> A simple, single-page site designed to showcase each project as a card. You can add more rows of projects as necessary, each row containing up to 3 projects!</p>
+          <a download="ProjectCardsWebsite" class="btn btn-outline-dark" role="button" href="downloadables/ProjectCards.zip"><i class="fa fa-download" aria-hidden="true"></i> Download</a><br>
+          <br>
+        </div>
+        <div class="col-md"></div>
+      </div>
+
+      <object type="text/html" data="portfolio/" class="siteview"></object>
+      <br>
+      <br>
+      <br>
+
+      <h1>"...wait, what do I do now?"</h1>
+      <div class="row">
+        <div class="col-md"></div>
+        <div class="col-md-5">
+          <p class="text-left"> You'll have to bear with me here - This site always has been and always will be work in progress. As it currently stands, the most up-to-date tutorial is in the readme associated with this site. For the fastest setup, just look at the "getting started" section, and nothing else!</p>
+          <a class="btn btn-outline-dark" role="button" href="https://github.com/MatthewCech/The-Portfolio/blob/master/README.md"><i class="fas fa-link"></i> Show me the steps</a><br>
+        </div>
+        <div class="col-md"></div>
+      </div>
+      <div class="spacer-bottom"></div>
     </div>
   </body>
 </html>
