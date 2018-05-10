@@ -6,7 +6,7 @@ Go ahead and make a github repo - for testing to make sure it's set up correctly
 
 ### Configuring GitHub's side of this:
 
-![Setting GitHub custom domain](https://i.imgur.com/NZlhA6a.gif)
+<img src="https://i.imgur.com/NZlhA6a.gif" alt="Configuring Github" width="300px">
 
 - Head to repo settings
 - Find the secion about github pages. If you have not enabled it, do so. 
@@ -17,7 +17,7 @@ Go ahead and make a github repo - for testing to make sure it's set up correctly
 
 ### Configuring Google Domains
 
-![Setting up Google Domains to point at GitHub for HTTP component](https://i.imgur.com/Nn929du.gif)
+<img src="https://i.imgur.com/Nn929du.gif" alt="Setting up Google Domains to point at GitHub for HTTP component" width="300px">
 
 - Go to domains.google.com and navigate to the domain you wish to point at github.
 - Head to the DNS tab (second from the right, looks like stacked boxes)
