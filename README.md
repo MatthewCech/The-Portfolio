@@ -47,7 +47,7 @@ We'll start by making an email to use with Cloudflare. This can be done using on
 
 Next, we're going to be setting up a cloudflare account, and fight out way to the console.
 
-![Making a cloudflare account](https://i.imgur.com/uNvyr7k.gifv)
+![Making a cloudflare account](https://i.imgur.com/uNvyr7k.gif)
 
 - Head to Cloudflare.com
 - Click on the 'log in' button in the upper right of the site, and proceed to make an account. For your email, use the email you just created.
@@ -57,3 +57,23 @@ Next, we're going to be setting up a cloudflare account, and fight out way to th
 - If all records are present, continue. This should take you to the last step before the console.
 - You will then be asked to update the name servers. Go back to the DNS records section of your custom domain, and go ahead and find the nameservers section at the top. Copy in the ones Cloudflare specifies.
 - Once updated. you will then be at the console.
+
+Second to last, we're going to set up an SSL certificate.
+
+![Getting an SSL certificate](https://i.imgur.com/8eG7flT.gif)
+
+- In cloudflare, head to the Crypto tab at the top
+- Under SSL at the top, select 'flexible' from the drop down. We're going to need a flexible certificate. 
+- turn 'Always use HTTPS' on
+- turn 'Automatic HTTPS Rewrites' on
+
+Finally, we're going to force everything to be rewritten to HTTPS. Because Security. Also looks professional. Also improves search result rating.
+
+
+
+- Head to the page rules tab at the top
+- Create a new page rule for "Enforce HTTPS"
+- Enter your site URL modified as follows: `http://*yoursitename.com*`
+	- As an example, this demo site has `http://*theportfolio.pw*` in that field
+
+In the crypto tab, if the certificate says "active" and if in the overview tab it says "Status: Active" then you're good to go for HTTPS. Try navigating to your page now! It should say "secure" to the left of the URL.
