@@ -1,5 +1,5 @@
 # The-Portfolio
-A quick template and walkthough for a minimalist portfolio website using the HTML present in this repo. Sections have accompanying gifs, but due to size limitations, I have not displayed the inline in the markdown. 
+A quick template and walkthough for a minimalist portfolio website using the HTML present in this repo. Sections have accompanying gifs, but due to size limitations, I have not displayed them as anything but links. 
 
 
 
