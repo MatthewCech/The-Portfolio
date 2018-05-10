@@ -1,15 +1,19 @@
 # The-Portfolio
-A quick template and walkthough for a minimalist portfolio website using the HTML present in this repo. Sections have accompanying gifs, but due to size limitations, I have not displayed them as anything but links. 
+A quick template and walkthough for a minimalist portfolio website using the files in this repo. Sections have accompanying gifs, but due to size limitations, I have not displayed them as anything but links. 
 
 
 
 ### Getting Started
 
-Go ahead and make a github repo - for testing to make sure it's set up correctly, make the name `yourname.github.io`. For example, I would use matthewcech.github.io as the name. You can do this with a differently named repo as well if you wish, you'll just have one extra step when 
+Go ahead and make a github repo - for testing to make sure it's set up correctly, make the name `yourname.github.io`. For example, I would use matthewcech.github.io as the name, and your site will be live at `https://yourname.github.io`! You can do this with a differently named repo as well if you wish, you'll just have to make sure you turn on github pages in the first section below.
+
+All things considered, if you don't care about a custom URL, you're done. Just grab index.html and the assets folder from this repo, plop them in your own, and you're good to go. **In fact, you could honestly just fork this and name it `yourname.github.io` and you'd have a live site!**
+
+IF you're after a custom domain tho, carry on! You'll learn about how to set that up, and a lot more.
 
 
 
-### Configuring GitHub's side of this:
+### Configuring GitHub's side for a custom URL:
 
 Section Walkthough Gif: https://i.imgur.com/NZlhA6a.gif
 
