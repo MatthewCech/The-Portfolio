@@ -5,11 +5,13 @@ A quick template and walkthough for a minimalist portfolio website using the fil
 
 ### Getting Started
 
-Go ahead and make a github repo - for testing to make sure it's set up correctly, make the name `yourname.github.io`. For example, I would use matthewcech.github.io as the name, and your site will be live at `https://yourname.github.io`! You can do this with a differently named repo as well if you wish, you'll just have to make sure you turn on github pages in the first section below.
+You're going to need a GitHub account, but wait, finish reading this paragraph before you make it. You should probably name it something like your name, or something close to your name for the purposes of looking professional. `yourGitHubUsername.github.io` will be how the site appears if you don't go through buying a custom URL, so keep that in mind when choosing a name.
+
+Go ahead and make a GitHub repository under the repositories tab on your account page - for testing to make sure it's set up correctly, make the name `yourGitHubUsername.github.io` and for ease of use, indicate that you want a ReadMe to be created for you. For example, I would use matthewcech.github.io as the name, and your site will be live at `https://yourname.github.io`! You can do this with a differently named repo as well if you wish, you'll just have to make sure you turn on github pages in the first section below.
 
 All things considered, if you don't care about a custom URL, you're done. Just grab index.html and the assets folder from any sites you downloaded at https://theportfolio.pw/ and plop them in your own (You don't need a git client, you can just drag and drop them into the repo), and you're good to go!
 
-IF you're after a custom domain tho, carry on! You'll learn about how to set that up, and a lot more.
+If you're after a custom domain tho, carry on! You'll learn about how to set that up, and a lot more.
 
 
 
