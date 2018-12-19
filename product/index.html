@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Configure meta tags accordingly. -->
+    <!-- Configure basics -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Set up title, favicon, and description -->
     <title>Product Website</title>
-    <link rel="shortcut icon" href="assets/folder-open.ico">
+    <link rel="shortcut icon" href="assets/wrench.ico">
     <meta name="description" content="The Product is a simple, clean layout designed to highlight a single product or tool you've created!">
-    <meta name="author" content="Matthew Cech"> <!-- Consider changing this name. -->
+    <meta name="author" content="Matthew Cech"> <!-- Changing this name! -->
 
-    <!-- Go ahead and grab Bootstrap and Fontawesome. -->
+    <!-- Grab Bootstrap and Fontawesome -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -21,97 +21,68 @@
   </head>
 
 
-  <!-- Stylesheet added here for ease of iteration. Consider moving to a separate file. -->
+  <!-- Stylesheet added here for ease of iteration. This will make the page load fast, but it can make it harder to manage if your site grows. If you add more pages, heavily consider moving this out to a separate file. -->
   <style>
-    /* Built-in */
-    body {
-      background-image: url('assets/squairy_light.png');
+    html {
+      min-height: 100%;
     }
-
-
-    /* Bootstrap classes being adjusted */
+    #grad {
+      background-image: linear-gradient(#de6262, #ffb88c), url("assets/tiny-squares.png");
+      text-align: center;
+    }
     .jumbotron {
-      border-radius: 7px;
-      background-color: rgba(200,200,200,0);
+      background-color: rgba(0,0,0,0);
     }
-
-
-    /* Custom-made classes */
-    .portfolio-showcase-img {
-      max-width: 200px;
-      border-radius: 250px;
-      margin-left: 10px;
-      margin-right: 10px;
-      display: inline-block;
+    .product-title {
+      margin-bottom: 0.5em;
+      font: bold 62px arial, sans-serif;
+      background-color: #932222;
+      color: transparent;
+      text-shadow: 2px 2px 3px rgba(255,255,255,0.12);
+      -webkit-background-clip: text;
+         -moz-background-clip: text;
+              background-clip: text;
     }
-
-    .portfolio-showcase-text {
-      margin-left: 10px;
-      margin-right: 10px;
-      margin-top: 10px;
+    .product-image {
+      margin-bottom: 2em;
+      border-radius: 10px;
+      box-shadow: 0 0 0 7px #fff;
     }
-
-    .portfolio-showcase-title {
-      margin-top: 20px;
+    .product-description {
+      text-align: center;
     }
-
-    .portfolio-social-link {
+    .product-social-link {
       width: 40px;
-    }
-
-    .portfolio-showcase-col {
-      margin-bottom: 30px;  
-    }
-    .portfolio-maring-left-fix {
-      margin-left: -2px;
     }
   </style>
 
 
   <!-- This is the body of the site: This is what's displayed in the browser! -->
-  <body>
+  <body id="grad">
     <div class="container">
       <div class="jumbotron">
 
         <!-- NAME HEADER AND TITLE -->
-        <h1>Your Name here</h1> 
-        <p>Place your job title or another short about you here - perhaps include any degrees or qualifications!</p> 
-
-        <!-- RESUME DOWNLOAD. CHANGE THE NAME IN THE DOWNLOAD SECTION! -->
-        <a download="Your Name Here - Resume" class="btn btn-outline-dark" role="button" href="assets/Resume.pdf"><i class="fa fa-download" aria-hidden="true"></i> Resume</a>
-
-        <!-- OPTIONAL OTHER LINKS -->
-        <a class="btn btn-outline-dark portfolio-social-link" role="button" href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-        <a class="btn btn-outline-dark portfolio-social-link" role="button" href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-        <a class="btn btn-outline-dark portfolio-social-link" role="button" href="https://www.youtube.com/"><i class="fab fa-youtube portfolio-maring-left-fix"></i></a>
-        <hr/>
-
-        <!-- columns start -->
-        <div class="row text-center"> 
-
-          <!-- FIRST COLUMN -->
-          <div class="col-md-4 portfolio-showcase-col">
-            <img class="portfolio-showcase-img" src="assets/showcase_1.jpeg" alt="Showcase 1 picture">
-            <h5 class="portfolio-showcase-text">Project Name</h5> <!-- Place inside h5 tag for link <a href="#"><i class="fas fa-link"></i></a> -->
-            <p class="text-left portfolio-showcase-text">Stock photo from Pexels.com. This would be an excellent place for a description to go. You can explain your project, talk about things you learned, stuff you're proud of. These projects are talking points that could come up in an interview. Talk about why this is awesome, and don't try to be overly modest - This is your portfolio!<p>
+        <h1 class="product-title">Product Name</h1>
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col">
+            <img class="img-fluid product-image" src="assets/product.jpg" alt="product image">
           </div>
-          
-          <!-- SECOND COLUMN -->
-          <div class="col-md-4 portfolio-showcase-col">
-            <img class="portfolio-showcase-img" src="assets/showcase_2.jpeg" alt="Showcase 2 picture">
-             <h5 class="portfolio-showcase-text">Another Project</h5>
-            <p class="text-left portfolio-showcase-text">Stock photo from Pexels.com. This would be an excellent place for a description to go. You can explain your project, talk about things you learned, stuff you're proud of. On mobile, this will be neither the first or last item, so you can sorta 'hide' somethting here if that makes sense.<p>
-          </div>
-          
-          <!-- THIRD COLUMN -->
-          <div class="col-md-4 portfolio-showcase-col">
-            <img class="portfolio-showcase-img" src="assets/showcase_3.jpg" alt="Showcase 3 picture">
-             <h5 class="portfolio-showcase-text">Third Project</h5>
-            <p class="text-left portfolio-showcase-text">Stock photo from Pexels.com. This would be an excellent place for a description to go. You can explain your project, talk about things you learned, stuff you're proud of. This is your last item, so finish strong and make it something awesome that you can talk about at length if asked!<p>
-          </div>
+          <div class="col-md-2"></div>
+        </div>
 
-        </div> 
-        <!-- columns end -->
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <p class="product-description">The product that fits all of your needs. This image was used courtesy of pexels, a lovely stock photo album that provdes me with all sorts of fun pictures that I can use when I'm laying out pages. This text should probably be about your product though, not about this small but excellent wooden boi.</p> 
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+        
+        <!-- Social links -->
+        <a class="btn btn-outline-dark product-social-link" role="button" href="https://github.com/"><i class="fab fa-github"></i></i></a>
+        <a class="btn btn-outline-dark product-social-link" role="button" href="https://github.com/"><i class="fab fa-github"></i></i></a>
 
       </div>
     </div>
