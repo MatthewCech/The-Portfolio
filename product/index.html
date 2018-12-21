@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <!-- Configure basics -->
@@ -50,13 +50,19 @@
               background-clip: text;
     }
     .product-image {
-      margin-bottom: 2em;
+      margin: 0px; /* No margin. Let other things handle that. */
       border-radius: 10000px;
       box-shadow: 0 0 0 7px #fff;
     }
     .product-description {
-
       text-align: center;
+    }
+    .product-wide-link {
+      /* Nothing fancy about those links, let autosizing handle it! */
+    }
+    .product-get-button {
+      margin-top: 2em;
+      margin-bottom: 2em;
     }
     .product-social-link {
       width: 40px;
@@ -70,7 +76,7 @@
       <div class="jumbotron">
 
 
-        <!-- NAME HEADER AND TITLE -->
+        <!-- Product name and picture -->
         <h1 class="product-title">Product Name</h1>
         <div class="row">
           <div class="col-md-4"></div>
@@ -80,27 +86,34 @@
           <div class="col-md-4"></div>
         </div>
 
-        <a class="btn btn-outline-dark product-social-link" role="button" href="https://github.com/"><i class="fab fa-github"></i></i></a>
-        
+        <!-- Link to download or use your product or application -->
+        <div class="product-get-button">
+          <a class="btn btn-outline-dark product-wide-link fa-1x" role="button" href="https://github.com/"><i class="fas fa-plus"></i> Get Product</i></i></a>
+        </div>
+
+        <!-- A brief about section coupled with a 'support us' section. Could be replaced with a second about or info section. -->
         <div class="row">
-          <div class="col-md-2"></div>
-          <div class="col-md-4">
-            <h2>Doot</h2>
-            <p class="product-description">The product that fits all of your needs. This image was used courtesy of pexels, a lovely stock photo album that provdes me with all sorts of fun pictures that I can use when I'm laying out pages. This text should probably be about your product though, not about this small but excellent wooden boi.</p> 
+          <div class="col-md-1"></div>
+          <div class="col-md-5">
+            <h2>Our Product Goal</h2>
+            <p class="product-description">We make a robust product, and it's great. This image was used courtesy of pexels, a lovely stock photo album that provdes me with all sorts of fun pictures that I can use when I'm laying out pages. This text should probably be about your product though, not about this small but excellent wooden boi.</p> 
           </div>
-          <div class="col-md-4">
-            <h2>Doot</h2>
-            <p class="product-description">The product that fits all of your needs. This image was used courtesy of pexels, a lovely stock photo album that provdes me with all sorts of fun pictures that I can use when I'm laying out pages. This text should probably be about your product though, not about this small but excellent wooden boi.</p> 
+          <div class="col-md-5">
+            <h2>Support Us</h2>
+            <p class="product-description">This project wouldn't be possible without support from awesome people like you! Thank you for using it, and be sure to support us on Patreon for access to exclusive product-related posts and rewards!</p> 
+          <a class="btn btn-outline-dark product-wide-link" role="button" href="https://patreon.com/"><i class="fab fa-patreon"></i> Patreon</a>
           </div>
-          <div class="col-md-2"></div>
+          <div class="col-md-1"></div>
         </div>
         
         <hr/>
 
-        <!-- Social links -->
+        <!-- Social links. Comment out things that don't apply! Remember to change the href= to your social media pages! -->
+        <a class="btn btn-outline-dark product-social-link" role="button" href="https://discord.com/"><i class="fab fa-discord"></i></i></i></a>
         <a class="btn btn-outline-dark product-social-link" role="button" href="https://github.com/"><i class="fab fa-github"></i></i></a>
-        <a class="btn btn-outline-dark product-social-link" role="button" href="https://github.com/"><i class="fab fa-github"></i></i></a>
-
+        <a class="btn btn-outline-dark product-social-link" role="button" href="https://twitter.com/"><i class="fab fa-twitter"></i></i></i></a>
+        <a class="btn btn-outline-dark product-social-link" role="button" href="https://youtube.com/"><i class="fab fa-youtube"></i></i></i></a>
+        <a class="btn btn-outline-dark product-social-link" role="button" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></i></i></a>
       </div>
     </div>
   </body>
