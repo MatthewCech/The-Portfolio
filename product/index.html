@@ -24,72 +24,118 @@
 
   <!-- Stylesheet added here for ease of iteration. This will make the page load fast, but it can make it harder to manage if your site grows. If you add more pages, heavily consider moving this out to a separate file. -->
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
     html {
       min-height: 100%;
+      position: relative;
     }
+
     h2 {
       font-family: 'Quicksand', sans-serif;
     }
+
     #grad {
-      background-image: linear-gradient(#A9CFD8, #fffcdc);/*linear-gradient(#de6262, #ffb88c), url("assets/tiny-squares.png");*/
+      background-image: linear-gradient(#A9CFD8, #fffcdc);
       text-align: center;
     }
+
+    #grad-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-image: url("assets/stripes-light.png");
+      display: block;
+      z-index: -1;
+    }
+
+    .container {
+      margin-bottom: 0px;
+    }
+
     .jumbotron {
       background-color: rgba(0,0,0,0);
+      margin-bottom: 0px
     }
+
     .product-title {
       margin-bottom: 0.5em;
       /*font-family: 'Major Mono Display', monospace;*/
       font-family: 'Quicksand', sans-serif;
       font-size: 56px;
-      background-color: #5E9BA5;
-      color: transparent;
-      text-shadow: 2px 2px 3px rgba(255,255,255,0.12);
-      -webkit-background-clip: text;
-         -moz-background-clip: text;
-              background-clip: text;
+      color: #5E9BA5;
     }
+
     .product-image {
-      margin: 0px; /* No margin. Let other things handle that. */
+      margin: 10px 0px;
       border-radius: 10000px;
-      box-shadow: 0 0 0 7px #fff;
+      box-shadow: 0 0 0 15px #fff;
     }
+
     .product-description {
       text-align: center;
     }
+
     .product-wide-link {
       /* Nothing fancy about those links, let autosizing handle it! */
     }
+
     .product-get-button {
-      margin-top: 2em;
+      margin-top: 2.5em;
       margin-bottom: 2em;
     }
+
     .product-social-link {
+      font-size: 1em;
       width: 40px;
+    }
+
+    /* Fix youtube's logo being wide */
+    .product-social-link > .fa-youtube {
+      position: relative;
+      left: -3px;
+    }
+
+    .product-social-footer {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
     }
   </style>
 
 
   <!-- This is the body of the site: This is what's displayed in the browser! -->
   <body id="grad">
+    <div id="grad-child"></div>
+
+
     <div class="container">
       <div class="jumbotron">
 
+        
 
         <!-- Product name and picture -->
         <h1 class="product-title">Product Name</h1>
         <div class="row">
-          <div class="col-md-4"></div>
+          <div class="col-sm-4"></div>
           <div class="col">
             <img class="img-fluid product-image" src="assets/product.jpg" alt="product image">
           </div>
-          <div class="col-md-4"></div>
+          <div class="col-sm-4"></div>
         </div>
+
 
         <!-- Link to download or use your product or application -->
         <div class="product-get-button">
           <a class="btn btn-outline-dark product-wide-link fa-1x" role="button" href="https://github.com/"><i class="fas fa-plus"></i> Get Product</i></i></a>
         </div>
+
 
         <!-- A brief about section coupled with a 'support us' section. Could be replaced with a second about or info section. -->
         <div class="row">
@@ -105,15 +151,23 @@
           </div>
           <div class="col-md-1"></div>
         </div>
+
         
+        <!-- Horizontal Line -->
         <hr/>
 
+
         <!-- Social links. Comment out things that don't apply! Remember to change the href= to your social media pages! -->
-        <a class="btn btn-outline-dark product-social-link" role="button" href="https://discord.com/"><i class="fab fa-discord"></i></i></i></a>
-        <a class="btn btn-outline-dark product-social-link" role="button" href="https://github.com/"><i class="fab fa-github"></i></i></a>
-        <a class="btn btn-outline-dark product-social-link" role="button" href="https://twitter.com/"><i class="fab fa-twitter"></i></i></i></a>
-        <a class="btn btn-outline-dark product-social-link" role="button" href="https://youtube.com/"><i class="fab fa-youtube"></i></i></i></a>
-        <a class="btn btn-outline-dark product-social-link" role="button" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></i></i></a>
+        <div class="row product-social-footer ">
+          <div class="product-social-footer">
+            <a class="btn btn-outline-dark product-social-link" role="button" href="https://discord.com/"><i class="fab fa-discord"></i></i></i></a>
+            <a class="btn btn-outline-dark product-social-link" role="button" href="https://github.com/"><i class="fab fa-github"></i></i></a>
+            <a class="btn btn-outline-dark product-social-link" role="button" href="https://twitter.com/"><i class="fab fa-twitter"></i></i></i></a>
+            <a class="btn btn-outline-dark product-social-link" role="button" href="https://youtube.com/"><i class="fab fa-youtube"></i></i></i></a>
+            <a class="btn btn-outline-dark product-social-link" role="button" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></i></i></a>
+          </div>
+        </div>
+
       </div>
     </div>
   </body>
