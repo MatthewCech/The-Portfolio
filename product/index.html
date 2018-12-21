@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
   <head>
     <!-- Configure basics -->
@@ -18,6 +18,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Quicksand" rel="stylesheet">
   </head>
 
 
@@ -26,8 +27,11 @@
     html {
       min-height: 100%;
     }
+    h2 {
+      font-family: 'Quicksand', sans-serif;
+    }
     #grad {
-      background-image: linear-gradient(#de6262, #ffb88c), url("assets/tiny-squares.png");
+      background-image: linear-gradient(#A9CFD8, #fffcdc);/*linear-gradient(#de6262, #ffb88c), url("assets/tiny-squares.png");*/
       text-align: center;
     }
     .jumbotron {
@@ -35,8 +39,10 @@
     }
     .product-title {
       margin-bottom: 0.5em;
-      font: bold 62px arial, sans-serif;
-      background-color: #932222;
+      /*font-family: 'Major Mono Display', monospace;*/
+      font-family: 'Quicksand', sans-serif;
+      font-size: 56px;
+      background-color: #5E9BA5;
       color: transparent;
       text-shadow: 2px 2px 3px rgba(255,255,255,0.12);
       -webkit-background-clip: text;
@@ -45,10 +51,11 @@
     }
     .product-image {
       margin-bottom: 2em;
-      border-radius: 10px;
+      border-radius: 10000px;
       box-shadow: 0 0 0 7px #fff;
     }
     .product-description {
+
       text-align: center;
     }
     .product-social-link {
@@ -62,24 +69,34 @@
     <div class="container">
       <div class="jumbotron">
 
+
         <!-- NAME HEADER AND TITLE -->
         <h1 class="product-title">Product Name</h1>
         <div class="row">
-          <div class="col-md-2"></div>
+          <div class="col-md-4"></div>
           <div class="col">
             <img class="img-fluid product-image" src="assets/product.jpg" alt="product image">
           </div>
-          <div class="col-md-2"></div>
+          <div class="col-md-4"></div>
         </div>
 
+        <a class="btn btn-outline-dark product-social-link" role="button" href="https://github.com/"><i class="fab fa-github"></i></i></a>
+        
         <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-6">
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <h2>Doot</h2>
             <p class="product-description">The product that fits all of your needs. This image was used courtesy of pexels, a lovely stock photo album that provdes me with all sorts of fun pictures that I can use when I'm laying out pages. This text should probably be about your product though, not about this small but excellent wooden boi.</p> 
           </div>
-          <div class="col-md-3"></div>
+          <div class="col-md-4">
+            <h2>Doot</h2>
+            <p class="product-description">The product that fits all of your needs. This image was used courtesy of pexels, a lovely stock photo album that provdes me with all sorts of fun pictures that I can use when I'm laying out pages. This text should probably be about your product though, not about this small but excellent wooden boi.</p> 
+          </div>
+          <div class="col-md-2"></div>
         </div>
         
+        <hr/>
+
         <!-- Social links -->
         <a class="btn btn-outline-dark product-social-link" role="button" href="https://github.com/"><i class="fab fa-github"></i></i></a>
         <a class="btn btn-outline-dark product-social-link" role="button" href="https://github.com/"><i class="fab fa-github"></i></i></a>
